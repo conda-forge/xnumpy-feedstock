@@ -1,15 +1,13 @@
-{% set name = "xnumpy" %}
-{% set version = "0.1.0" %}
-{% set sha256 = "dc0cf3ed57c8b4c4dfc063dec9bb0d707635f054a5b06d4542ffc2a9126c8a2e" %}
+{% set data = load_setuptools() %}
+
 
 package:
-  name: {{ name|lower }}
-  version: {{ version }}
+  name: xnumpy
+  version: {{ data.get("version") }}
 
 source:
-  fn: {{ name }}-{{ version }}.tar.gz
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: {{ sha256 }}
+  git_url: https://github.com/jakirkham/xnumpy.git
+  git_rev: 654a737fa31c6321942e84bfda0c564b5d602936
 
 build:
   number: 0
@@ -25,8 +23,14 @@ requirements:
     - numpy
 
 test:
+  source_files:
+    - tests
+
   imports:
     - xnumpy
+
+  commands:
+    - python -m unittest discover -s .
 
 about:
   home: https://github.com/jakirkham/xnumpy
