@@ -7,7 +7,7 @@ package:
 
 source:
   git_url: https://github.com/jakirkham/xnumpy.git
-  git_rev: 0cae2a4868203e8ac68d6b3d013e9112b197cacb
+  git_rev: 654a737fa31c6321942e84bfda0c564b5d602936
 
 build:
   number: 0
