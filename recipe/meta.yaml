@@ -1,6 +1,6 @@
 {% set name = "xnumpy" %}
-{% set version = "0.1.2" %}
-{% set sha256 = "31e7f1100f57cb74048fca9ce0493353d2583c85eea779845bcf51de11b23bfa" %}
+{% set version = "0.1.3" %}
+{% set sha256 = "1d6aee311373a8ad5cd0cc2dcb65456f876813c822b7dc5523c20b3bc9c3ebed" %}
 
 package:
   name: {{ name|lower }}
